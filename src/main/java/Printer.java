@@ -1,14 +1,28 @@
 public class Printer {
+
     private int paper;
+    private int toner;
 
-
-    public Printer(int paper) {
+    public Printer(int paper, int toner) {
         this.paper = paper;
+        this.toner = toner;
     }
 
     public int paper() {
-        return this.paper();
+        return this.paper;
     }
+
+    public int toner() {
+        return this.toner;
+    }
+
+    public void print(int pages, int copies) {
+        int usedPaper = pages * copies;
+        this.paper -= usedPaper;
+        this.toner -= usedPaper;
+    }
+
+
 }
 
 
