@@ -23,6 +23,12 @@ public class PrinterTest {
     }
 
     @Test
+    public void canNotPrint(){
+        printer.print(32, 20);
+        assertEquals(500, printer.paper());
+    }
+
+    @Test
     public void hasToner(){
         assertEquals(300, printer.toner());
     }

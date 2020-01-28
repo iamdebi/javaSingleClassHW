@@ -18,8 +18,10 @@ public class Printer {
 
     public void print(int pages, int copies) {
         int usedPaper = pages * copies;
-        this.paper -= usedPaper;
-        this.toner -= usedPaper;
+        if (this.paper >= usedPaper && this.toner >= usedPaper) {
+            this.paper -= usedPaper;
+            this.toner -= usedPaper;
+        }
     }
 
 
